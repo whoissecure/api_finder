@@ -1,0 +1,109 @@
+{
+    "Google API Key": {
+        "regex": "AIza[0-9A-Za-z-_]{35}",
+		"links": {
+			"0": {
+				"link": "https://maps.googleapis.com/maps/api/staticmap?center=45%2C10&zoom=7&size=400x400&key=APIKEYHERE",
+				"method": "get",
+				"error": "The Google Maps Platform server rejected your request. The provided API key is invalid.",
+				"error": "The Google Maps Platform server rejected your request. This API project is not authorized to use this API."
+			},
+			"1":{
+				"link": "https://maps.googleapis.com/maps/api/streetview?size=400x400&location=40.720032,-73.988354&fov=90&heading=235&pitch=10&key=APIKEYHERE",
+				"method": "get",
+				"error": "The Google Maps Platform server rejected your request. The provided API key is invalid.",
+				"error": "The Google Maps Platform server rejected your request. This API project is not authorized to use this API."
+			},
+			"2":{
+				"link": "https://maps.googleapis.com/maps/api/elevation/json?locations=39.7391536,-104.9847034&key=APIKEYHERE",
+				"method": "get",
+				"error": "The provided API key is invalid.",
+				"error": "This API project is not authorized to use this API."
+			},
+			"3":{
+				"link": "https://maps.googleapis.com/maps/api/timezone/json?location=39.6034810,-119.6822510&timestamp=1331161200&key=APIKEYHERE",
+				"method": "get",
+				"error": "The provided API key is invalid.",
+				"error": "This API project is not authorized to use this API."
+			},
+			"4":{
+				"link": "https://roads.googleapis.com/v1/nearestRoads?points=60.170880,24.942795%7C60.170879,24.942796%7C60.170877,24.942796&key=APIKEYHERE",
+				"method": "get",
+				"error": "API key not valid. Please pass a valid API key.",
+				"error": "PERMISSION_DENIED"
+			},
+			"5":{
+				"link": "https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood4&key=APIKEYHERE",
+				"method": "get",
+				"error": "The provided API key is invalid.",
+				"error": "This API project is not authorized to use this API."
+			},
+			"6":{
+				"link": "https://maps.googleapis.com/maps/api/geocode/json?latlng=40,30&key=APIKEYHERE",
+				"method": "get",
+				"error": "The provided API key is invalid.",
+				"error": "REQUEST_DENIED"
+			},
+			"7":{
+				"link": "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=40.6655101,-73.89188969999998&destinations=40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.6905615%2C-73.9976592%7C40.659569%2C-73.933783%7C40.729029%2C-73.851524%7C40.6860072%2C-73.6334271%7C40.598566%2C-73.7527626%7C40.659569%2C-73.933783%7C40.729029%2C-73.851524%7C40.6860072%2C-73.6334271%7C40.598566%2C-73.7527626&key=APIKEYHERE",
+				"method": "get",
+				"error": "The provided API key is invalid.",
+				"error": "This API project is not authorized to use this API."
+			},
+			"8":{
+				"link": "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=APIKEYHERE",
+				"method": "get",
+				"error": "The provided API key is invalid.",
+				"error": "This API project is not authorized to use this API."
+			},
+			"9":{
+				"link": "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Bingh&types=%28cities%29&key=APIKEYHERE",
+				"method": "get",
+				"error": "The provided API key is invalid.",
+				"error": "This API project is not authorized to use this API."
+			}
+		}
+    },
+    "Slack Webhook": {
+	    "regex": "https://hooks.slack.com/services/T[a-zA-Z0-9_]{8}/B[a-zA-Z0-9_]{8}/[a-zA-Z0-9_]{24}",
+		"links": {
+			"0": {
+				"link": "APIKEYHERE",
+				"method": "get",
+				"error": "no_team"
+			}
+		}
+	},
+    "Bitly secret key": {
+	    "regex": "R_[0-9a-f]{32}",
+		"links": {
+			"0": {
+				"link": "https://api-ssl.bitly.com/v3/shorten?access_token=APIKEYHERE&longUrl=https://www.google.com",
+				"method": "get",
+				"error": "INVALID_ARG_ACCESS_TOKEN"
+			}
+		}
+	},
+    "Slack API token": {
+	    "regex": "(xox[p|b|o|a]-[0-9]{12}-[0-9]{12}-[0-9]{12}-[a-z0-9]{32})",
+		"links": {
+			"0": {
+				"link": "https://slack.com/api/auth.test?token=xoxp-APIKEYHERE&pretty=1",
+				"method": "get",
+				"error": "invalid_auth"
+			}
+		}
+	},
+    "Zapier Webhook": {
+	    "regex": "https://(?:www.)?hooks\\.zapier\\.com/hooks/catch/[A-Za-z0-9]+/[A-Za-z0-9]+/",
+		"links": {
+			"0": {
+				"link": "APIKEYHERE",
+				"method": "post",
+				"post_data": "{\"name\":\"dirox\"}",
+				"error": "invalid_auth"
+			}
+		}
+	}
+
+}
