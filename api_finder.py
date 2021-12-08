@@ -37,7 +37,7 @@ def find_it(url, data, output=False):
                 				msg = "[!] API Key found in " + url + " for " + service + ". Key: \"" + key + '" used in: ' + link.replace("APIKEYHERE", key)
                 				print(msg)
                 				if output:
-               						output.write(msg)
+               						output.write(msg + "\n")
 
     except:
     	pass
